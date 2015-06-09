@@ -14,11 +14,6 @@ $table_prefix  = getenv('TABLE_PREFIX');
 
 define('WP_DEBUG', false);
 
-if ( !defined('ABSPATH') )
-  define('ABSPATH', dirname(__FILE__) . '/');
-
-require_once(ABSPATH . 'wp-settings.php');
-
 /* Multisite */
 define( 'WP_ALLOW_MULTISITE', true );
 define('MULTISITE', true);
@@ -27,3 +22,8 @@ define('DOMAIN_CURRENT_SITE', getenv('DOMAIN_CURRENT_SITE'));
 define('PATH_CURRENT_SITE', '/');
 define('SITE_ID_CURRENT_SITE', 1);
 define('BLOG_ID_CURRENT_SITE', 1);
+
+if ( !defined('ABSPATH') )
+  define('ABSPATH', dirname(__FILE__) . '/');
+
+require_once(ABSPATH . 'wp-settings.php');
